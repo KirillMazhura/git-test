@@ -9,12 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css\normalize.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <a href="index.html" class="logo">
+            <a href="index.html" class="logo wow animate__fadeIn">
                 <img src="img/logo.svg" alt="Logo">
             </a>
             <input type="text" class="input input-address" placeholder="Адрес доставки">
@@ -23,7 +24,7 @@
                     <img class="button-icon" src="img/user.svg" alt="user">
                     <span class="button-text">Войти</span>
                 </button>
-                <button class="button">
+                <button class="button" id="cart-button">
                     <img class="button-icon" src="img/shopping-cart.svg" alt="shopping cart">
                     <span class="button-text">Корзина</span>
                 </button>
@@ -233,7 +234,7 @@
             <div class="footer-block">
                 <img src="img/logo.svg" alt="logo" class="logo footer-logo">
                 <nav class="footer-nav">
-                    <a href="#" class="footer-link">Ресторанам</a>
+                    <a href="#" class="footer-link wow animate__fadeInRight">Ресторанам</a>
                     <a href="#" class="footer-link">Курьерам</a>
                     <a href="#" class="footer-link">Пресс-центр</a>
                     <a href="#" class="footer-link">Контакты</a>
@@ -246,7 +247,83 @@
             </div>
         </div>
     </footer>
-
+    <div class="modal">
+        <div class="modal-dialogue">
+            <div class="modal-header">
+                <h3 class="modal-title">
+                    Корзина
+                </h3>
+                <button class="modal-close">
+                    &times;
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="food-row">
+                    <span class="food-name">
+                        Ролл угорь стандарт
+                    </span>
+                    <strong class="food-price">
+                        250
+                    </strong>
+                    <div class="food-counter">
+                        <button class="counter-button">
+                            -
+                        </button>
+                        <span class="counter">1</span>
+                        <button class="counter-button">
+                            +
+                        </button>
+                    </div>
+                </div>
+                <div class="food-row">
+                    <span class="food-name">
+                        Ролл угорь стандарт
+                    </span>
+                    <strong class="food-price">
+                        250
+                    </strong>
+                    <div class="food-counter">
+                        <button class="counter-button">
+                            -
+                        </button>
+                        <span class="counter">1</span>
+                        <button class="counter-button">
+                            +
+                        </button>
+                    </div>
+                </div>
+                <div class="food-row">
+                    <span class="food-name">
+                        Ролл угорь стандарт
+                    </span>
+                    <strong class="food-price">
+                        250
+                    </strong>
+                    <div class="food-counter">
+                        <button class="counter-button">
+                            -
+                        </button>
+                        <span class="counter">1</span>
+                        <button class="counter-button">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <span class="modal-price">1250</span>
+                <div class="footer-buttons">
+                    <div class="button button-primary">Оформить заказ</div>
+                    <div class="button">Отмена</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

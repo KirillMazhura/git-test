@@ -6,6 +6,9 @@ body {
     font-family: 'Roboto', sans-serif;
     padding-top: 44px;
 }
+.user-name {
+    display: none;
+}
 .container {
     max-width: 1200px;
     margin: auto
@@ -42,7 +45,6 @@ body {
 .buttons {
     display:flex;
     align-items: center;
-
 }
 .button {
     display: flex;
@@ -55,6 +57,9 @@ body {
     color: #595959;
     font-size: 16px;
     line-height: 24px;
+}
+.button-out {
+    display: none
 }
 .button-primary {
     background-color: #1890FF;
@@ -250,7 +255,7 @@ line-height: 32px; /* 177.778% */
     font-size: 18px;
     line-height: 21px;
 }
-.modal {
+.modal, .modal-auth{
     position: fixed;
     left: 0;
     top: 0;
@@ -282,7 +287,7 @@ line-height: 32px; /* 177.778% */
     justify-content: space-between;
     margin-bottom: 45px;
 }
-.modal-close {
+.modal-close, .close-auth {
     font-size: 36px;
     border: none;
     background-color: transparent;

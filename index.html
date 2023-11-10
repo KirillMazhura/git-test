@@ -20,14 +20,18 @@
             </a>
             <input type="text" class="input input-address" placeholder="Адрес доставки">
             <div class="buttons">
-                <button class="button button-primary">
+                <span class="user-name"></span>
+                <button class="button button-primary button-auth">
                     <img class="button-icon" src="img/user.svg" alt="user">
                     <span class="button-text">Войти</span>
                 </button>
-                <button class="button">
+                <button class="button" id="cart-button">
                     <img class="button-icon" src="img/shopping-cart.svg" alt="shopping cart">
                     <span class="button-text">Корзина</span>
                 </button>
+                <button class="button button-primary button-out">
+                    <img class="button-icon" src="img/user.svg" alt="user">
+                    <span class="button-text">Выйти</span>
             </div>
         </header>
         
@@ -236,7 +240,105 @@
             </div>
         </div>
     </footer>
-
+    <div class="modal">
+        <div class="modal-dialogue">
+            <div class="modal-header">
+                <h3 class="modal-title">
+                    Корзина
+                </h3>
+                <button class="modal-close">
+                    &times;
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="food-row">
+                    <span class="food-name">
+                        Ролл угорь стандарт
+                    </span>
+                    <strong class="food-price">
+                        250
+                    </strong>
+                    <div class="food-counter">
+                        <button class="counter-button">
+                            -
+                        </button>
+                        <span class="counter">1</span>
+                        <button class="counter-button">
+                            +
+                        </button>
+                    </div>
+                </div>
+                <div class="food-row">
+                    <span class="food-name">
+                        Ролл угорь стандарт
+                    </span>
+                    <strong class="food-price">
+                        250
+                    </strong>
+                    <div class="food-counter">
+                        <button class="counter-button">
+                            -
+                        </button>
+                        <span class="counter">1</span>
+                        <button class="counter-button">
+                            +
+                        </button>
+                    </div>
+                </div>
+                <div class="food-row">
+                    <span class="food-name">
+                        Ролл угорь стандарт
+                    </span>
+                    <strong class="food-price">
+                        250
+                    </strong>
+                    <div class="food-counter">
+                        <button class="counter-button">
+                            -
+                        </button>
+                        <span class="counter">1</span>
+                        <button class="counter-button">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <span class="modal-price">1250</span>
+                <div class="footer-buttons">
+                    <div class="button button-primary">Оформить заказ</div>
+                    <div class="button">Отмена</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-auth">
+        <div class="modal-dialogue modal-dialogue-auth">
+            <button class="close-auth">&times;</button>
+            <form action="" id="logInForm">
+                <fieldset class="modal-body">
+                    <legend class="modal-title">Авторизация</legend>
+                    <label for="" class="label-auth">
+                        <span>Логин</span>
+                        <input type="text" id="login">
+                    </label>
+                    <label for="" class="label-auth">
+                        <span>Пароль</span>
+                        <input type="password" id="password">
+                    </label>
+                </fieldset>
+                <div class="modal-footer">
+                    <div class="footer-buttons">
+                        <button class="button button-primary button-login" type="submit">Войти</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
-
+<script src="js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+<script src="js/main.js"></script>
 </html>
